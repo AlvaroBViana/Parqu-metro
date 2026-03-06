@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site para cálculo de parquímetro</title>
+</head>
+<body>
+    <input type="number" id="opcao" placeholder="Escolha uma opção (1-3)">
+    <button onclick="parquimetro.option()" type="button">OK</button>
+    <p>A opção 1 = 30 minutos ; a opção 2 = 60 minutos; A opção 3 = 120 minutos (tempo máximo permitido)</p>
+
+    <p id="resultado">Resultado:</p>
+
+    <p>Agora coloque abaixo o quanto você vai pagar</p>
+
+    <input type="number" id="valor" placeholder="Digite o quanto você quer pagar">
+    <button onclick="parquimetro.valorPago()" type="button">Gerar</button>
+
+    <p id="resultado2"></p>
+    <p id="troco">Seu troco é: </p>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
