@@ -7,7 +7,7 @@
 
 
     
-class parquimetro {
+class Parquimetro {
     
     constructor (tempo, valor, opcao) {
         this.tempo = tempo;
@@ -61,6 +61,8 @@ class parquimetro {
         else {document.getElementById("resultado2").textContent = `Você pagou: R$${pagamento}. Este valor é insuficiente!`};
     }   
 }
+
+const parquimetro = new Parquimetro ()
 
     
 
