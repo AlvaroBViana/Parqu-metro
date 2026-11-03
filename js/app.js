@@ -1,13 +1,17 @@
 import { categoria, ListaGastosPorCategoria } from "./classes.js";
 import { valorNegativo, atualizarInterface } from "./utils.js";
 
-const gastosPorCategoria = new ListaGastosPorCategoria(
-    new categoria("Alimentação"),
+//Continuei com a matriz das categorias, só que em uma única linha de código, aproveitando e utilizando a função map() para instanciar cada elemento da matriz na classe categoria.
+//Mas somente o primeiro valor da sublista contida na matriz, ou seja, o nome das categorias.
+const nomedascategorias = [["Alimentação", 0], ["Transporte", 0], ["Lazer", 0], ["Outros", 0]].map(n => new categoria(n[0]));;
+//Depois utilizei o spread operator para colocar a sublista em argumentos soltos, porque o map() modificou o estado da classe para uma array.
+const gastosPorCategoria = new ListaGastosPorCategoria(...nomedascategorias)
+    /*new categoria("Alimentação"),
     new categoria("Transporte"),
     new categoria("Lazer"),
-    new categoria("Outros")
-)
-
+    new categoria("Outros")*/
+    // -> Substituídos pela função map() e uso do spread operator
+    
 
 
 // Manipulação do DOM
